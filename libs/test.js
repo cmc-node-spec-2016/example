@@ -1,7 +1,8 @@
 'use strict';
+const Promise = require('bluebird');
 
 function times2(x) {
-  return new Promise((accept, reject) => {
+  return new Promise((accept) => {
     setTimeout(() => {
       accept(x * 2);
     }, 100);
