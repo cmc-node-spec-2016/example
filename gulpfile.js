@@ -17,7 +17,8 @@ var babelOptions = {
 gulp.task('lint', function () {
     gulp.src('libs/**/*.js')
       .pipe(eslint())
-      .pipe(eslint.formatEach('compact', process.stderr));
+      .pipe(eslint.formatEach('compact', process.stderr))
+      .pipe(eslint.failOnError());
 });
 
 gulp.task('libs', function () {
